@@ -9,6 +9,7 @@ import {
     BreadcrumbLink,
     BreadcrumbSeparator,
   } from '@chakra-ui/react'
+import ProfileBtns from "./ProfileBtns"
 const Profile = () => {
     const dispatch = useDispatch()
     useEffect(()=>{
@@ -16,17 +17,15 @@ const Profile = () => {
     },[])
     const user = useSelector(state=>state.authReducer.user)
     return (
-        <div style={{textAlign:"center"}}>
+        <div style={{textAlign:"center"}} id='profile'>
             
-        
-            <SimpleGrid minChildWidth='120px' spacing='40px'>
-  <Box bg='tomato' height='80px'><Button as={Link} to='/ajouter-une-annonce'> Ajouter une annonce </Button></Box>
-  <Box bg='tomato' height='80px'><Button as={Link} to='/mes-informations'> Mes Informations</Button></Box>
-  <Box bg='tomato' height='80px'><Button as={Link} to='/mes-favoris'> Mes Favoris</Button></Box>
-  <Box bg='tomato' height='80px'><Button as={Link} to='/mes-annonces'> Mes Annonces</Button></Box>
-        
-</SimpleGrid>
-        </div>
+        <ProfileBtns linki={'/ajouter-une-annonce'} name={'Ajouter une annonce'}/>
+        <ProfileBtns linki={'/mes-informations'} name={'Mes informations'}/>
+        <ProfileBtns linki={'/mes-favoris'} name={'Mes Favoris'}/>
+        <ProfileBtns linki={'/mes-annonces'} name={'Mes Annonces'}/>
+    
+
+        </div>  
         
     )
 }

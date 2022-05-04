@@ -10,7 +10,8 @@ const Carschema = new mongoose.Schema ({
     kilometrage: {type:Number,required:true},
     année: {type:String,required:true},
     boite: {type:String,required:true},
-    puissance : {type:String,required:true}
+    puissance : {type:String,required:true},
+    images: {type:String,required:true}
 })
 
 

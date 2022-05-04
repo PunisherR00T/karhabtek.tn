@@ -22,10 +22,10 @@ import { FiHeart } from 'react-icons/fi'
 const Carinfocard = ({Car}) => {
     return (
       
-        <div>
+        <div id='carcard'>
           
           <Center py={6}>
-      <Stack borderWidth="1px" borderRadius="lg" w={{ sm: '100%', md: '540px' }} height={{ sm: '476px', md: '20rem' }}direction={{ base: 'column', md: 'row' }} bg={useColorModeValue('white', 'gray.900')} boxShadow={'2xl'} padding={4}>
+      <Stack borderWidth="1px" borderRadius="lg" w={{ sm: '100%', md: '540px' }} height={{ sm: '476px', md: '20rem' }}direction={{ base: 'column', md: 'row' }} bg={useColorModeValue('white', 'gray.900')} boxShadow={'2xl'} padding={4} id='cardinf'>
         <Flex flex={1} bg="blue.200">
         <Carouscard/>
         <Icon viewBox='0 0 200 200' color='red.500'>
@@ -37,15 +37,15 @@ const Carinfocard = ({Car}) => {
         <Stack flex={1} flexDirection="column" justifyContent="center" alignItems="center" p={1} pt={2}>
         <ViewIcon id='viewicon' style={{margin: "-2% 0 8% 84%",cursor:'pointer',position:"sticky"}}/>
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-          {Car.brand}
+          {Car.brand} {Car.model}
           </Heading>
           <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
-          {Car.model}
+          {`${Car.price} DT`}
           </Text>
           
           <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
           <Badge px={2} py={1} bg={useColorModeValue('gray.50', 'gray.800')} fontWeight={'400'}>
-            {Car.price}
+            {Car.puissance}
             </Badge>
             <Badge px={2} py={1} bg={useColorModeValue('gray.50', 'gray.800')} fontWeight={'400'}>
             {Car.energie}
@@ -54,7 +54,7 @@ const Carinfocard = ({Car}) => {
             {Car.transmission}
             </Badge>
             <Badge px={2} py={1} bg={useColorModeValue('gray.50', 'gray.800')} fontWeight={'400'}>
-            {Car.kilometrage}
+            {`${Car.kilometrage} KM`}
             </Badge>
           </Stack>
 

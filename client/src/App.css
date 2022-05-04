@@ -51,11 +51,39 @@
 }
 
 #Section {
-    margin : 2% 15% 0 15%
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 #decobtn {
     justify-content: center;
 }
+#navbarScroll{
+    justify-content: center;
 
+}
+
+#carcard {
+    margin: 0 2% 0 2%;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+}
+
+#Addpost{
+    display: flex;
+    flex-wrap:nowrap;
+}
+
+#cardinf { 
+    padding: 13% 4% 13% 4%;
+}
+.d-blockw-100 {
+    width: fit-content;
+}
